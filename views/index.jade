@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.content
+		- if (logined == undefined) {
+			.info-facebook.text-center
+				h4 <i class="glyphicon glyphicon-user"></i> <b>Name</b> and your id is: <i class="glyphicon glyphicon-info-sign"></i> <b>12345678</b>
+			.all-page
+				- for(var i = 0; i < 3; i++) {
+						.one-page
+							.avatar
+								img(src="images/avatar.jpg")
+							.info-page
+								.info-page-text
+									h2.page-name Your page name
+									h4.page-id ID: 123123123123
+								a.select-page(href="#") SELECT
+				- }
+		- } 
+		- else {
+				img.img-login(src="images/facebook-login.png")
+		- }

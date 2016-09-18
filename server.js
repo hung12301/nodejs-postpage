@@ -1,7 +1,5 @@
-/**
- * Created by Admin on 13/07/2016.
- */
 var app = require("./app.js");
+var postpage = require("./postpage.js");
 var http = require("http");
 
 var server = http.createServer(app);
